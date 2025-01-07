@@ -46,7 +46,7 @@ const lineChartOptions = {
   scales: {
     x: {
       grid: {
-        display: false,
+        display: true,
       },
     },
     y: {
@@ -71,6 +71,9 @@ const LineChart = ({ value = [] }) => {
       },
     ],
   };
+
+  console.log(value,'linechart1');
+   console.log(data,'linechart2');
 
   return <Line data={data} options={lineChartOptions} />;
 };

@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { Link } from "../styles/StyledComponents";
 import { Box, Stack, Typography } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AvatarCard from "./AvatarCard";
 import { motion } from "framer-motion";
 
@@ -15,6 +16,22 @@ const ChatItem = ({
   index = 0,
   handleDeleteChat,
 }) => {
+
+
+
+const theme = createTheme({
+  typography: {
+    h1: {
+      fontSize: "2rem",
+      fontWeight: 700,
+    },
+    body1: {
+      fontSize: "2rem",
+      fontWeight: 700,
+    },
+  },
+});
+
   return (
     <Link
       sx={{
@@ -34,13 +51,22 @@ const ChatItem = ({
           backgroundColor: sameSender ? "black" : "unset",
           color: sameSender ? "white" : "unset",
           position: "relative",
-          padding: "1rem",
+          padding: "2rem",
+          // fontWeight: '100%',
+          // fontSize: '3rem'
         }}
       >
         <AvatarCard avatar={avatar} />
 
         <Stack>
-          <Typography>{name}</Typography>
+          
+          <Typography  >{name}</Typography>
+          {/* <ThemeProvider theme={theme}> */}
+      {/* <Typography variant="h1">{name}</Typography> */}
+      {/* <Typography variant="body1">{name}</Typography> */}
+    {/* </ThemeProvider> */}
+          
+
           {newMessageAlert && (
             <Typography>{newMessageAlert.count} New Message</Typography>
           )}

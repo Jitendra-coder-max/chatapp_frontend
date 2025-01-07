@@ -234,7 +234,7 @@ const Chat = ({ chatId, user }) => {
             onChange={messageOnChange}
           />
 
-          <IconButton
+          <IconButton 
             type="submit"
             sx={{
               rotate: "-30deg",
@@ -247,8 +247,8 @@ const Chat = ({ chatId, user }) => {
               },
             }}
           >
-            <SendIcon />
-          </IconButton>
+            <SendIcon />    
+          </IconButton>         
         </Stack>
       </form>
 

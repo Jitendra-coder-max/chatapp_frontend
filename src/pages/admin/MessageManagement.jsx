@@ -92,6 +92,8 @@ const MessageManagement = () => {
     "dashboard-messages"
   );
 
+  console.log(data, 'msg')
+
   useErrors([
     {
       isError: error,
@@ -100,6 +102,7 @@ const MessageManagement = () => {
   ]);
 
   const [rows, setRows] = useState([]);
+
 
   useEffect(() => {
     if (data) {

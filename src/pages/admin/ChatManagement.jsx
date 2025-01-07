@@ -84,6 +84,9 @@ const ChatManagement = () => {
     },
   ]);
 
+  console.log(data,'data')
+  console.log(data,'myData')
+
   const [rows, setRows] = useState([]);
 
   useEffect(() => {

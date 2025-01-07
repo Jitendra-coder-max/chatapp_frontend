@@ -14,7 +14,7 @@ const Login = lazy(() => import("./pages/Login"));
 const Chat = lazy(() => import("./pages/Chat"));
 const Groups = lazy(() => import("./pages/Groups"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-
+  
 const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
 const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
 const UserManagement = lazy(() => import("./pages/admin/UserManagement"));
@@ -25,14 +25,17 @@ const MessagesManagement = lazy(() =>
 
 const App = () => {
   const { user, loader } = useSelector((state) => state.auth);
+  console.log(user,"user")
 
   const dispatch = useDispatch();
 
+
   useEffect(() => {
     axios
-      .get(`${server}/api/v1/user/me`, { withCredentials: true })
+      .get(`${server}/api/v1/user/me`, { withCredentials: true }    )
+      // .then((res)=> console.log(res,'res'))
       .then(({ data }) => dispatch(userExists(data.user)))
-      .catch((err) => dispatch(userNotExists()));
+      .catch((err) => dispatch(userNotExists()));                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
   }, [dispatch]);
 
   return loader ? (

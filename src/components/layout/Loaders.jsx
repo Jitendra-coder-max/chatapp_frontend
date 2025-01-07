@@ -21,6 +21,7 @@ const LayoutLoader = () => {
           {Array.from({ length: 10 }).map((_, index) => (
             <Skeleton key={index} variant="rounded" height={"5rem"} />
           ))}
+          
         </Stack>
       </Grid>
 
@@ -33,6 +34,7 @@ const LayoutLoader = () => {
           display: { xs: "none", md: "block" },
         }}
       >
+      
         <Skeleton variant="rectangular" height={"100vh"} />
       </Grid>
     </Grid>

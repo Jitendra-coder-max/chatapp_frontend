@@ -28,7 +28,10 @@ import Profile from "../specific/Profile";
 import Header from "./Header";
 
 const AppLayout = () => (WrappedComponent) => {
+  console.log(WrappedComponent,'data')
+  console.log('data2')
   return (props) => {
+    
     const params = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -40,6 +43,7 @@ const AppLayout = () => (WrappedComponent) => {
     const [onlineUsers, setOnlineUsers] = useState([]);
 
     const { isMobile } = useSelector((state) => state.misc);
+    // console.log(isMobile, 'mob')
     const { user } = useSelector((state) => state.auth);
     const { newMessagesAlert } = useSelector((state) => state.chat);
 
@@ -102,7 +106,9 @@ const AppLayout = () => (WrappedComponent) => {
         {isLoading ? (
           <Skeleton />
         ) : (
+          
           <Drawer open={isMobile} onClose={handleMobileClose}>
+           
             <ChatList
               w="70vw"
               chats={data?.chats}
@@ -114,7 +120,8 @@ const AppLayout = () => (WrappedComponent) => {
           </Drawer>
         )}
 
-        <Grid container height={"calc(100vh - 4rem)"}>
+        <Grid container height={"calc(100vh - 9rem)"}>
+          <h1> </h1>
           <Grid
             item
             sm={4}
@@ -139,9 +146,9 @@ const AppLayout = () => (WrappedComponent) => {
           <Grid item xs={12} sm={8} md={5} lg={6} height={"100%"}>
             <WrappedComponent {...props} chatId={chatId} user={user} />
           </Grid>
-
+<p></p>
           <Grid
-            item
+            item--
             md={4}
             lg={3}
             height={"100%"}

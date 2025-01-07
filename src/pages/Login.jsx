@@ -41,7 +41,7 @@ const Login = () => {
     const toastId = toast.loading("Logging In...");
 
     setIsLoading(true);
-    const config = {
+    const config= {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
@@ -60,15 +60,22 @@ const Login = () => {
       dispatch(userExists(data.user));
       toast.success(data.message, {
         id: toastId,
+        
       });
+  //     console.log(toastId,'id')
+  //     console.log(data.message,'toast')
+  // console.log(data,'value');
+
     } catch (error) {
-      toast.error(error?.response?.data?.message || "Something Went Wrong", {
+      toast.error(error?.response?.data?.message ||  "Something Went Wrong", {
         id: toastId,
       });
     } finally {
       setIsLoading(false);
     }
   };
+
+  
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -96,12 +103,14 @@ const Login = () => {
         formData,
         config
       );
+      
 
       dispatch(userExists(data.user));
       toast.success(data.message, {
         id: toastId,
       });
     } catch (error) {
+      // console.log(error,'login')
       toast.error(error?.response?.data?.message || "Something Went Wrong", {
         id: toastId,
       });
@@ -137,7 +146,7 @@ const Login = () => {
         >
           {isLogin ? (
             <>
-              <Typography variant="h5">Login</Typography>
+              <Typography variant="h5">Login 1</Typography>
               <form
                 style={{
                   width: "100%",

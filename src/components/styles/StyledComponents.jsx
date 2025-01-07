@@ -1,6 +1,6 @@
 import { Skeleton, keyframes, styled } from "@mui/material";
 import { Link as LinkComponent } from "react-router-dom";
-import { grayColor, matBlack } from "../../constants/color";
+import { grayColor, matBlack ,greenColor,skyBlue} from "../../constants/color";
 
 const VisuallyHiddenInput = styled("input")({
   border: 0,
@@ -31,7 +31,10 @@ const InputBox = styled("input")`
   padding: 0 3rem;
   border-radius: 1.5rem;
   background-color: ${grayColor};
+  // background-color: green;
+
 `;
+
 
 const SearchField = styled("input")`
   padding: 1rem 2rem;
@@ -39,7 +42,8 @@ const SearchField = styled("input")`
   border: none;
   outline: none;
   border-radius: 1.5rem;
-  background-color: ${grayColor};
+  // background-color: ${skyBlue};
+  background-color: red;
   font-size: 1.1rem;
 `;
 

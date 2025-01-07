@@ -85,17 +85,19 @@ const Header = () => {
             <Typography
               variant="h6"
               sx={{
-                display: { xs: "none", sm: "block" },
-              }}
+                display: { xs: "block", sm: "block" },
+              }}l
             >
-              Chattu
+              Chat
             </Typography>
 
             <Box
               sx={{
-                display: { xs: "block", sm: "none" },
+                display: { xs: "none", sm: "none" },
               }}
+              
             >
+              
               <IconButton color="inherit" onClick={handleMobile}>
                 <MenuIcon />
               </IconButton>

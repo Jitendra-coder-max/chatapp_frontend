@@ -25,6 +25,7 @@ const AvatarCard = ({ avatar = [], max = 4 }) => {
                 left: {
                   xs: `${0.5 + index}rem`,
                   sm: `${index}rem`,
+                
                 },
               }}
             />
