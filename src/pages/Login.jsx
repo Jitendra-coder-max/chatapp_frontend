@@ -122,7 +122,9 @@ const Login = () => {
   return (
     <div
       style={{
-        backgroundImage: bgGradient,
+        // backgroundImage: bgGradient,
+        // backgroundImage:'#2C505C
+        backgroundColor:'#00ffdf'
       }}
     >
       <Container
