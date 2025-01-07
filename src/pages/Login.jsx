@@ -146,7 +146,7 @@ const Login = () => {
         >
           {isLogin ? (
             <>
-              <Typography variant="h5">Login 1</Typography>
+              <Typography variant="h5">Login </Typography>
               <form
                 style={{
                   width: "100%",
